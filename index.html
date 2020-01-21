@@ -9,16 +9,6 @@
   <title>MailPlus | User Consent</title>
 </head>
 <body>
-  <div class="header-navigation">
-    <div class="header-navigation-items">
-      <a href="#" class="header-navigation-item active"><img src="./images/icon-home-20.svg" class="header-navigation-item__img"> Home</a>      
-      <a href="#" class="header-navigation-item">TV +</a>      
-      <a href="#" class="header-navigation-item">Radio +</a>      
-      <a href="#" class="header-navigation-item">Puzzles +</a>
-      <a href="#" class="header-navigation-item">Paper</a>      
-    </div>
-  </div>
-
   <div class="mailplus-header">
     <img src="./images/mailplus-logo-white-colour.svg" class="mailplus-header__img" alt="MailPlus logo">
     <span class="mailplus-header__close">X</span>
@@ -27,148 +17,82 @@
 
   <div class="container">
     <div class="content-side-menu">
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>Send to localytics</strong></p>
+      <div class="content-side-menu__item active" data-id="1">
+        <p class="content-side-menu__item-text"><strong>Your Privacy</strong></p>
       </div>
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>Performance</strong></p>
+      <div class="content-side-menu__item" data-id="2">
+        <p class="content-side-menu__item-text"><strong>Strictly Necessary Cookies</strong></p>
       </div>
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>Functionality</strong></p>
+      <div class="content-side-menu__item" data-id="3">
+        <p class="content-side-menu__item-text"><strong>Performance Cookies</strong></p>
       </div>
-      <div class="content-side-menu__item active">
-        <p class="content-side-menu__item-text"><strong>Tracking</strong></p>
+      <div class="content-side-menu__item" data-id="4">
+        <p class="content-side-menu__item-text"><strong>Functional Cookies</strong></p>
       </div>
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>Performance & Tracking</strong></p>
+      <div class="content-side-menu__item" data-id="5">
+        <p class="content-side-menu__item-text"><strong>Targeting Cookies</strong></p>
       </div>
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>Functionality & Tracking</strong></p>
-      </div>
-      <div class="content-side-menu__item">
-        <p class="content-side-menu__item-text"><strong>App Context</strong></p>
+      <div class="content-side-menu__item-link">
+        <a href="https://www.mymailaccount.co.uk/pages/mymail/privacyAndCookiesPolicy" target="_blank"><strong>More Information</strong></a>
       </div>
     </div>
   
     <div class="content">
-      <div class="content__item">
+      <div class="content__item display" id="feature-1">
         <div class="content__item-header">
-          <h4>Tracking</h4>
-          <div class="content-buttons">
-            <div class="content-buttons__btn"><strong>ALLOW</strong></div>
-            <div class="content-buttons__btn"><strong>BLOCK ALL</strong></div>
-          </div>
+          <p class="content__item-header__title">Your Privacy</p>
         </div>
         <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
+          <p>When you visit any web site, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalised web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.</p>
         </div>
       </div>
 
-      <div class="content__item">
+      <div class="content__item display-no" id="feature-2">
         <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__block-btn"><span class="dot"></span><span class="content-buttons__block-btn__text"><strong>BLOCKED</strong></span></div>
-          </div>
+          <p class="content__item-header__title">Strictly Necessary Cookies</p>
+          <p class="content__item-header__active-info">Always Active</p>
         </div>
         <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
+          <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p>
         </div>
       </div>
 
-      <div class="content__item">
+      <div class="content__item display-no" id="feature-3">
         <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
+          <p class="content__item-header__title">Performance Cookies</p>
+          <label class="switch">
+            <input type="checkbox" id="togBtn">
+            <div class="slider round"></div>
+          </label>
         </div>
         <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
+          <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p>
         </div>
       </div>
 
-      <div class="content__item">
+      <div class="content__item display-no" id="feature-4">
         <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
+          <p class="content__item-header__title">Functional Cookies</p>
+          <label class="switch">
+            <input type="checkbox" id="togBtn">
+            <div class="slider round"></div>
+          </label>
         </div>
         <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
+          <p>These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</p>
         </div>
       </div>
 
-      <div class="content__item">
+      <div class="content__item display-no" id="feature-5">
         <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
+          <p class="content__item-header__title">Targeting Cookies</p>
+          <label class="switch">
+            <input type="checkbox" id="togBtn">
+            <div class="slider round"></div>
+          </label>
         </div>
         <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
-        </div>
-      </div>
-
-      <div class="content__item">
-        <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
-        </div>
-        <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
-        </div>
-      </div>
-
-      <div class="content__item">
-        <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
-        </div>
-        <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
-        </div>
-      </div>
-
-      <div class="content__item">
-        <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
-        </div>
-        <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
-        </div>
-      </div>
-
-      <div class="content__item">
-        <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
-        </div>
-        <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
-        </div>
-      </div>
-
-      <div class="content__item">
-        <div class="content__item-header">
-          <p class="content__item-header__title">Individual preference item</p>
-          <div class="content-buttons">
-            <div class="content-buttons__allow-btn"><span class="content-buttons__allow-btn__text"><b>ALLOW</b></span><span class="dot"></span></div>
-          </div>
-        </div>
-        <div class="content__item-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eos consequuntur modi distinctio aperiam corporis voluptatum laudantium deserunt voluptate libero corrupti consectetur.</p>
+          <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
         </div>
       </div>
     </div>
@@ -180,5 +104,7 @@
       <div class="footer-buttons__btn">SAVE SETTINGS</div>
     </div>
   </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
