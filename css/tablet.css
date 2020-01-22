@@ -13,9 +13,9 @@ body {
   display: block;
 }
 
-@media (min-width: 1280px) and (max-width: 1365px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .mailplus-popup-wrapper {
-    width: 1280px;
+    width: 768px;
     margin: auto;
     border: 1px solid #EEEEEE;
   }
@@ -60,6 +60,7 @@ body {
     width: 650px;
     margin: 40px auto 0px auto;
     display: flex;
+    height: 70vh;
   }
 
   .content-side-menu {
@@ -146,6 +147,8 @@ body {
   .content__item-body p {
     text-align: left;
     font-size: 14px;
+    color: #263238;
+    line-height: 20px;
   }
 
   /* Allow - Block sliding checkbox - START */
@@ -235,7 +238,7 @@ body {
   /* Allow-Block sliding checkbox - END */
 
   .main-footer {
-    height: 100px;
+    height: 120px;
     border-top: 1px solid grey;
     background-image: linear-gradient(to bottom, #26323800 71%, #263238 247%);
   }
@@ -262,9 +265,9 @@ body {
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .mailplus-popup-wrapper {
-    width: 1366px;
+    width: 1024px;
     margin: auto;
     border: 1px solid #EEEEEE;
   }
@@ -307,9 +310,9 @@ body {
 
   .container {
     width: 650px;
-    margin: 40px auto 50px auto;
+    margin: 40px auto 0px auto;
     display: flex;
-    height: 67vh;
+    height: 63vh;
   }
 
   .content-side-menu {
@@ -358,6 +361,7 @@ body {
 
   .content {
     width: 385px;
+    /* height: 548px; */
     font-family: 'Open Sans', sans-serif;
     padding-top: 7px;
     overflow: scroll;
@@ -395,9 +399,11 @@ body {
   .content__item-body p {
     text-align: left;
     font-size: 14px;
+    color: #263238;
+    line-height: 20px;
   }
 
-  /* Allow-Block sliding checkbox - START */
+  /* Allow - Block sliding checkbox - START */
   .switch {
     position: relative;
     display: inline-block;
@@ -406,7 +412,7 @@ body {
     margin-top: 4px;
   }
 
-  /* .switch input {display:none;} */
+  .switch input {display:none;}
 
   .slider {
     position: absolute;
