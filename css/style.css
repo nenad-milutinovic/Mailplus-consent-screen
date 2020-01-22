@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .display-no {
@@ -11,41 +12,11 @@ body {
   display: block;
 }
 
-@media (min-width: 1280px) {
-  .header-navigation {
-    height: 30px;
-    margin-top: 20px;
-  }
-
-  .header-navigation-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 660px;
+@media (min-width: 1280px) and (max-width: 1365px) {
+  .mailplus-popup-wrapper {
+    width: 1280px;
     margin: auto;
-  }
-
-  .header-navigation-item {
-    width: 140px;
-    height: 20px;
-    text-align: center;
-    padding-top: 9px;
-    padding-left: 22px;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    color: #263238;
-  }
-
-  .header-navigation-item__img {
-    position: absolute;
-    top: 7px;
-    left: 22px;
-    padding-left: 12px;
+    border: 1px solid #EEEEEE;
   }
 
   .active {
@@ -68,7 +39,7 @@ body {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    width: 240px;
+    width: 250px;
     margin: auto;
     padding-top: 20px;
   }
@@ -158,15 +129,16 @@ body {
   
   .content__item-header__title {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 18px;
     margin-bottom: 2px;
     margin-top: 7px;
   }
 
   .content__item-header__active-info {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    margin-top: 11px;
+    margin-top: 9px;
     margin-bottom: 4px;
   }
 
@@ -185,6 +157,255 @@ body {
   }
 
   .switch input {display:none;}
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid #78909C;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #285CFF;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(65px);
+  }
+
+  .slider:after
+  {
+  content:'BLOCKED';
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 12px;
+  font-family: 'Open sans', sans-serif;
+  padding-left: 30px;
+  font-weight: bold;
+  }
+
+  input:checked + .slider:after
+  { 
+    content:'ALLOW';
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 12px;
+  font-family: 'Open sans', sans-serif;
+  padding-right: 55px;
+  font-weight: bold;
+  color: white;
+  }
+
+  input:not(:checked) + .slider:before {
+    background-color: #285CFF;
+  }
+  /* Allow-Block sliding checkbox - END */
+
+  .main-footer {
+    height: 100px;
+    border-top: 1px solid grey;
+    background-image: linear-gradient(to bottom, #26323800 71%, #263238 247%);
+  }
+
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .footer-buttons__btn {
+    width: 156px;
+    height: 29px;
+    padding-top: 9px;
+    border: 1px solid #285CFF;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-align: center;
+    color: #285CFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1366px) {
+  .mailplus-popup-wrapper {
+    width: 1366px;
+    margin: auto;
+    border: 1px solid #EEEEEE;
+  }
+
+  .active {
+    background-color: #285CFF;
+    color: #fff;
+  }
+
+  .mailplus-header {
+    background-color: #263238;
+    height: 150px;
+    text-align: center;
+    position: relative;
+  }
+
+  .mailplus-header__img {
+    padding-top: 20px;
+  }
+
+  .mailplus-header__text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    width: 250px;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .mailplus-header__close {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .container {
+    width: 650px;
+    margin: 40px auto 50px auto;
+    display: flex;
+  }
+
+  .content-side-menu {
+    width: 201px;
+    margin-right: 20px;
+  }
+
+  .content-side-menu__item {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    margin-bottom: -2px;
+    cursor: pointer;
+  }
+
+  .content-side-menu__item-link {
+    width: 200px;
+    height: 30px;
+    background-color: #EEEEEE;
+    padding-top: 2px;
+    margin-top: 12px;
+    border-radius: 4px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .content-side-menu__item-link a {
+    text-decoration: none;
+    font-family: 'Open sans', sans-serif;
+    font-size: 13px;
+    color: #263238;
+  }
+
+  .content-side-menu__item.active {
+    background-color: #285CFF;
+  }
+
+  .content-side-menu__item-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding-top: 2px;
+    line-height: 24px;
+  }
+
+  .content {
+    width: 385px;
+    height: 676px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 7px;
+    overflow: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content__item-header h4 {
+    margin: 2px;
+  }
+  
+  .content__item-header__title {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 2px;
+    margin-top: 7px;
+  }
+
+  .content__item-header__active-info {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 9px;
+    margin-bottom: 4px;
+  }
+
+  .content__item-body p {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  /* Allow-Block sliding checkbox - START */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 97px;
+    height: 30px;
+    margin-top: 4px;
+  }
+
+  /* .switch input {display:none;} */
 
   .slider {
     position: absolute;
