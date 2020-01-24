@@ -1,4 +1,4 @@
-const listItems = document.querySelectorAll('.content-side-menu__item')
+const sideMenuItems = document.querySelectorAll('.content-side-menu__item')
 
 const showItem = e => {
   e.stopPropagation()
@@ -22,6 +22,6 @@ const showItem = e => {
   }
 }
 
-listItems.forEach(item => {
+sideMenuItems.forEach(item => {
   item.addEventListener('click', showItem)
 })

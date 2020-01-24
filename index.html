@@ -67,7 +67,7 @@
           <div class="content__item-header">
             <p class="content__item-header__title">Performance Cookies</p>
             <label class="switch">
-              <input type="checkbox" id="togBtn">
+              <input type="checkbox" id="performance">
               <div class="slider round"></div>
             </label>
           </div>
@@ -80,7 +80,7 @@
           <div class="content__item-header">
             <p class="content__item-header__title">Functional Cookies</p>
             <label class="switch">
-              <input type="checkbox" id="togBtn">
+              <input type="checkbox" id="functionality">
               <div class="slider round"></div>
             </label>
           </div>
@@ -93,7 +93,7 @@
           <div class="content__item-header">
             <p class="content__item-header__title">Targeting Cookies</p>
             <label class="switch">
-              <input type="checkbox" id="togBtn">
+              <input type="checkbox" id="tracking">
               <div class="slider round"></div>
             </label>
           </div>
@@ -106,11 +106,12 @@
 
     <footer class="main-footer">
       <div class="main-footer__cookie-buttons">
-        <a href="#" class="cookie-buttons__btn">ALLOW ALL</a>
-        <a href="#" class="cookie-buttons__btn">SAVE SETTINGS</a>
+        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=1" class="cookie-buttons__btn">ALLOW ALL</a>
+        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=0" id="save-settings" class="cookie-buttons__btn">SAVE SETTINGS</a>
       </div>
     </footer>
   </div>
   <script src="./js/main.js"></script>
+  <script src="./js/cookie-settings.js"></script>
 </body>
 </html>
