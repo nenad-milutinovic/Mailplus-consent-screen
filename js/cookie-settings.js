@@ -1,38 +1,44 @@
 const categoriesAllowOption = document.querySelectorAll('input[type=checkbox]')
-const saveSettingsBtn = document.querySelector('#save-settings')
-let href = saveSettingsBtn.getAttribute('href')
-let paramsArray = href.split('&')
-let queryParams = paramsArray.slice(1, paramsArray.length)
-const consents = {}
+const saveSettingsDesktopBtn = document.querySelector('#save-settings-desktop')
+const saveSettingsMobileBtn = document.querySelector('#save-settings-mobile')
+const saveSettingsButtons = [ saveSettingsDesktopBtn, saveSettingsMobileBtn ]
 
-queryParams.forEach(el => {
-  consents[el.split('=')[0]] = el.split('=')[1]
-})
+const itemHandler = item => {
+  let href = item.getAttribute('href')
+  let paramsArray = href.split('&')
+  let queryParams = paramsArray.slice(1, paramsArray.length)
+  const consents = {}
 
-const categoryHandler = e => {
-  const categorySelected = e.target.id
+  queryParams.forEach(el => {
+    consents[el.split('=')[0]] = el.split('=')[1]
+  })
 
-  if (categorySelected) {
-    consents[categorySelected] = e.target.checked ? '1' : '0'    
-  }
-
-  queryParams = queryParams.map(e => {
-    const newQueryParams = e.split('=')
-
-    if (newQueryParams.includes(categorySelected)) {
-      newQueryParams[1] = consents[categorySelected]
+  const categoryHandler = e => {
+    const categorySelected = e.target.id
+    
+    if (categorySelected) {
+      consents[categorySelected] = e.target.checked ? '1' : '0'    
     }
-
-    return newQueryParams.join('=')
-  })  
-
   
-  paramsArray = paramsArray.slice(0, 1).concat(queryParams)
-  const newHref = paramsArray.join('&')  
-  saveSettingsBtn.setAttribute('href', newHref)
+    queryParams = queryParams.map(e => {
+      const newQueryParams = e.split('=')
+  
+      if (newQueryParams.includes(categorySelected)) {
+        newQueryParams[1] = consents[categorySelected]
+      }
+  
+      return newQueryParams.join('=')
+    })  
+  
+    
+    paramsArray = paramsArray.slice(0, 1).concat(queryParams)
+    const newHref = paramsArray.join('&')  
+    item.setAttribute('href', newHref)
+  }
+  
+  categoriesAllowOption.forEach(el => {
+    el.addEventListener('click', categoryHandler)
+  })
 }
 
-categoriesAllowOption.forEach(el => {
-  el.addEventListener('click', categoryHandler)
-})
-
+saveSettingsButtons.forEach(item => itemHandler(item))

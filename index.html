@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animated-checkbox.css">
   <title>MailPlus | User Consent</title>
 </head>
 <body>
@@ -17,8 +18,16 @@
     </div>
 
     <div class="mobile-cookie-settings-buttons">
-      <a href="#" class="cookie-buttons__btn">ALLOW ALL</a>
-      <a href="#" class="cookie-buttons__btn">SAVE SETTINGS</a>
+      <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=1" id="allow-all-mobile" class="cookie-buttons__btn">ALLOW ALL</a>
+      <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=0" id="save-settings-mobile" class="cookie-buttons__btn">SAVE SETTINGS</a>
+    </div>
+
+    <div class="checkbox-container no-show">
+      <input type="checkbox" id="ch-box" />
+      <label for="ch-box" class="check-box"></label>
+      <div class="saved">
+        <p>SAVED</p>
+      </div>
     </div>
     
     <div class="container">
@@ -106,8 +115,8 @@
 
     <footer class="main-footer">
       <div class="main-footer__cookie-buttons">
-        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=1" class="cookie-buttons__btn">ALLOW ALL</a>
-        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=0" id="save-settings" class="cookie-buttons__btn">SAVE SETTINGS</a>
+        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=1" id="allow-all-desktop" class="cookie-buttons__btn">ALLOW ALL</a>
+        <a href="adrenalin://a.com?action=setconsents&performance=1&functionality=1&tracking=0" id="save-settings-desktop" class="cookie-buttons__btn">SAVE SETTINGS</a>
       </div>
     </footer>
   </div>
@@ -115,3 +124,5 @@
   <script src="./js/cookie-settings.js"></script>
 </body>
 </html>
+
+<!--  -->

@@ -1,0 +1,244 @@
+@-moz-keyframes dothabottomcheck {  
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes dothabottomcheck {  
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes dothabottomcheck {  
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 37px;
+  }
+}
+
+@keyframes dothatopcheck {  
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 57px;
+  }
+}
+
+@-webkit-keyframes dothatopcheck {  
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 57px;
+  }
+}
+
+@-moz-keyframes dothatopcheck {  
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 57px;
+  }
+}
+
+@keyframes heading {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes checkboxshow {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    transform: translateY(-25%);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.container__fadeIn {
+  animation: fadein 2s;
+}
+
+.container__fadeOut {
+  transform: translateY(-120px);
+  animation: fadeout .5s;
+}
+
+.checkbox-container {
+  width: 200px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  opacity: 0;
+  animation: checkboxshow 2.7s forwards ease-in;
+}
+
+.saved {
+  height: 50px;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.checkbox-container p {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-65px);
+  animation: heading 1.2s forwards ease-in;
+}
+
+input[type=checkbox] { display: none; }
+
+.check-box {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #285CFF;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+
+.check-box::before,
+.check-box::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: 8px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: inline-block;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  content: '';
+  -webkit-transition: opacity ease 0.5;
+  -moz-transition: opacity ease 0.5;
+  transition: opacity ease 0.5;
+  -webkit-transition: opacity ease 0.5;
+  -moz-transition: opacity ease 0.5;
+  transition: opacity ease 0.5;
+}
+
+.check-box::before {
+  top: 71px;
+  left: 43px;
+  -moz-transform: rotate(-145deg);
+  -ms-transform: rotate(-145deg);
+  -o-transform: rotate(-145deg);
+  -webkit-transform: rotate(-145deg);
+  transform: rotate(-145deg);
+}
+
+.check-box::after {
+  top: 45px;
+  left: 15px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type=checkbox]:checked + .check-box::after,
+.check-box.checked::after {
+  height: 50px;
+  -moz-animation: dothabottomcheck 1s ease 0s forwards;
+  -o-animation: dothabottomcheck 1s ease 0s forwards;
+  -webkit-animation: dothabottomcheck 1s ease 0s forwards;
+  animation: dothabottomcheck 1s ease 0s forwards;
+}
+
+input[type=checkbox]:checked + .check-box::before,
+.check-box.checked::before {
+  height: 120px;
+  -moz-animation: dothatopcheck 1.2s ease 0s forwards;
+  -o-animation: dothatopcheck 1.2s ease 0s forwards;
+  -webkit-animation: dothatopcheck 1.2s ease 0s forwards;
+  animation: dothatopcheck 1.2s ease 0s forwards;
+}
+
+.no-show {
+  display: none;
+}
+
+.show {
+  display: block;
+}
