@@ -125,7 +125,7 @@
 }
 
 .container__fadeOut {
-  transform: translateY(+70px);
+  transform: translateY(+40px);
   animation: fadeout .5s;
 }
 
