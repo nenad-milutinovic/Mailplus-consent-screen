@@ -40,6 +40,19 @@ const handleSubmit = e => {
     container.style.opacity = '0'
     checkBox.classList.remove('no-show')
 
+    const link = document.createElement('a')
+    link.href = 'adrenalin://a.com?action=continue'
+    
+    const triggerClickEvent = (el) => {
+      const evt = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      })
+
+      const canceled = !el.dispatchEvent(evt)
+    }    
+
     setTimeout(() => {
       if (container.classList.contains('container__fadeOut') && container.classList.contains('container__fadeIn')) {
         container.classList.remove('container__fadeOut')
@@ -51,6 +64,7 @@ const handleSubmit = e => {
       
       document.querySelector('#ch-box').checked = false
       document.querySelector('.mailplus-popup-wrapper').style.display = 'none'
+      triggerClickEvent(link)
     }, 2400)
     
 }
